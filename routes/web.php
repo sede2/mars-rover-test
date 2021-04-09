@@ -17,82 +17,82 @@ Route::get('/', function () {
     return view('welcome');
 
 
-    $mars = \App\Mars::generate(20, 20);
-    $rover = new \App\Rover($mars, 2, 2, new \App\Map\Direction(\App\Map\Direction::NORTH), new App\Detectors\Collection([new \App\Detectors\ForwardDetector()]));
-    $mars->addItem(new \App\Map\Obstacle($mars, 1, 1), 1, 1);
-    $transmitter = new \App\Transmitter\RoverTransmitter($rover, new \App\Transmitter\EventHandler());
-    echo '<h1>Inicio</h1>';
-
-    echo '&nbsp;E<br/>';
-    echo 'N S<br/>';
-    echo '&nbsp;W<br/>';
-    render($mars);
-
-
-    echo '<h1>F</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
-    render($mars);
-
-    echo '<h1>F</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
-    render($mars);
-
-    echo '<h1>F</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
-    render($mars);
-
-
-    echo '<h1>R</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
-    render($mars);
-
-    echo '<h1>F</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
-    render($mars);
-
-    echo '<h1>F</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
-    render($mars);
-
-    echo '<h1>R</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
-    render($mars);
-
-    echo '<h1>F</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
-    render($mars);
-
-    echo '<h1>R</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
-    render($mars);
-
-    echo '<h1>F</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
-    render($mars);
-
-    echo '<h1>R</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
-    render($mars);
-
-    echo '<h1>R</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
-    render($mars);
-
-    echo '<h1>R</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
-    render($mars);
-
-    echo '<h1>R</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
-    render($mars);
-
-    echo '<h1>F</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
-    render($mars);
-
-    echo '<h1>RFFF</h1>';
-    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'RFFF'));
-    render($mars);
+//    $mars = \App\Mars::generate(20, 20);
+//    $rover = new \App\Rover($mars, 2, 2, new \App\Map\Direction(\App\Map\Direction::NORTH), new App\Detectors\Collection([new \App\Detectors\ForwardDetector()]));
+//    $mars->addItem(new \App\Map\Obstacle($mars, 1, 1), 1, 1);
+//    $transmitter = new \App\Transmitter\RoverTransmitter($rover, new \App\Transmitter\EventHandler());
+//    echo '<h1>Inicio</h1>';
+//
+//    echo '&nbsp;E<br/>';
+//    echo 'N S<br/>';
+//    echo '&nbsp;W<br/>';
+//    render($mars);
+//
+//
+//    echo '<h1>F</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
+//    render($mars);
+//
+//    echo '<h1>F</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
+//    render($mars);
+//
+//    echo '<h1>F</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
+//    render($mars);
+//
+//
+//    echo '<h1>R</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
+//    render($mars);
+//
+//    echo '<h1>F</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
+//    render($mars);
+//
+//    echo '<h1>F</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
+//    render($mars);
+//
+//    echo '<h1>R</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
+//    render($mars);
+//
+//    echo '<h1>F</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
+//    render($mars);
+//
+//    echo '<h1>R</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
+//    render($mars);
+//
+//    echo '<h1>F</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
+//    render($mars);
+//
+//    echo '<h1>R</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
+//    render($mars);
+//
+//    echo '<h1>R</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
+//    render($mars);
+//
+//    echo '<h1>R</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
+//    render($mars);
+//
+//    echo '<h1>R</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'R'));
+//    render($mars);
+//
+//    echo '<h1>F</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'F'));
+//    render($mars);
+//
+//    echo '<h1>RFFF</h1>';
+//    $transmitter->recivedMessage(new \App\Transmitter\NewOrderMessage(\App\Transmitter\Transmitter::ROVER_ORDER, 'RFFF'));
+//    render($mars);
 //
 //
 //    echo '<h1>F</h1>';
